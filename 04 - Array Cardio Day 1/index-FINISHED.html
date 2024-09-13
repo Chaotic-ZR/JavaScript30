@@ -58,7 +58,8 @@
     // });
 
     const ordered = inventors.sort((a, b) => a.year > b.year ? 1 : -1);
-    console.table(ordered);
+    console.log("test");
+    console.log(ordered);
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live?
@@ -88,8 +89,8 @@
     // 7. sort Exercise
     // Sort the people alphabetically by last name
     const alpha = people.sort((lastOne, nextOne) => {
-      const [aLast, aFirst] = lastOne.split(', ');
-      const [bLast, bFirst] = nextOne.split(', ');
+      const aLast = lastOne.split(', ')[1];
+      const bLast = nextOne.split(', ')[1];
       return aLast > bLast ? 1 : -1;
     });
     console.log(alpha);
